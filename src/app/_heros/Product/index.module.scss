@@ -1,0 +1,67 @@
+@use '../../_css/common.scss' as *;
+
+.productHero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+
+  @include small-break {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mediaWrapper {
+  border-radius: 20px;
+  position: relative;
+  min-height: 550px;
+
+
+  @media screen and (max-width: 768px) {
+    min-height: 550px;
+  }
+
+  @media screen and (max-width: 480px) {
+    min-height: 350px;
+  }
+
+}
+
+
+
+.image {
+
+  border-radius: 20px;
+  overflow: 'hidden';
+  display: 'block';
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.categoryWrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.category {
+  font-size: 16px;
+}
+
+.stock {
+  color: var(--color-green-500);
+}
+
+.separator {
+  color: var(--color-gray-500);
+  padding: 0 10px;
+}
+
+.description {
+  padding: 30px 0;
+}

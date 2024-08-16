@@ -1,0 +1,23 @@
+@use '../../../_css/queries.scss' as *;
+
+.card {
+  position: relative;
+  background-color: var(--color-dark-50);
+  min-height: 320px;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+  flex-direction: column;
+  border-radius: 20px;
+  align-items: center;
+
+
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}

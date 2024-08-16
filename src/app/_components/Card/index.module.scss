@@ -1,0 +1,133 @@
+@import '../../_css/common';
+
+.card {
+  position: relative;
+  background-color: var(--color-dark-50);
+  min-height: 440px;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+  flex-direction: column;
+  border-radius: 20px;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    min-height: 380px;
+    width: 40%;
+
+  }
+
+  @media screen and (max-width: 480px) {
+    min-height: 380px;
+    width: 70%;
+
+    justify-self: center;
+
+  }
+
+
+
+}
+
+
+.content {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: white;
+  width: 100%;
+
+  @include small-break {
+    padding: calc(var(--base) / 2);
+    gap: calc(var(--base) / 4);
+  }
+}
+
+.title {
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  overflow: hidden;
+  word-wrap: break-word;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  /* Adjust line-height to reduce space between lines */
+}
+
+.centerAlign {
+  align-items: center;
+}
+
+.body {
+  flex-grow: 1;
+}
+
+.priceActions {
+  gap: var(--base);
+
+}
+
+.price {
+  font-weight: 800;
+  margin: 0;
+}
+
+.leader {
+  @extend %label;
+  display: flex;
+  gap: var(--base);
+}
+
+.description {
+  margin: 0;
+  line-height: 24px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hideImageOnMobile {
+  @include mid-break {
+    display: none;
+  }
+}
+
+.mediaWrapper {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  min-height: 262px;
+  background-color: var(--color-dark-50);
+}
+
+.imageLink {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  overflow: 'hidden';
+  display: 'block';
+
+}
+
+.placeholder {
+  background-color: var(--theme-elevation-50);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+
+  @include mid-break {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
